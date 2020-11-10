@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Final project</title>
+    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
+</head>
+<body class="main">
+    <div class="background">
+      <header class="header">
+        <p class="header__logo">NewAnalyzer</p>
+        <ul class="header__menu">
+            <li class="header__menu"><a href="#" class="header__menu_link">Главная</a></li>
+            <li class="header__menu"><a href="#" class="header__menu_link">О проекте</a></li>
+        </ul>
+      </header>
+
+      <hr class="margin">
+
+      <section class="search">
+        <h1 class="search__title">Что в мире творится?</h1>
+        <p class="search__text">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.</p>
+        <form class="search__field">
+          <input type="search" placeholder="Введите тему новости" class="search__field_input">
+          <button type="submit" class="search__field_button">Искать</button>
+        </form>
+      </section>
+    </div>
+    <script src="<%= htmlWebpackPlugin.files.js %>"></script>
+</body>
+</html>

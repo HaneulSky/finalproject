@@ -1,0 +1,9 @@
+@import url('__text/search__text.css');
+@import url('__title/search__title.css');
+@import url('__field/search__field.css');
+
+.search{
+    padding-left: 416px;
+    color: #fff;
+    padding-top: 80px;
+}

@@ -1,0 +1,6 @@
+.background{
+    background-image: url('../../images/search-background.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding-bottom: 80px;
+}
