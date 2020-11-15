@@ -10,8 +10,8 @@
       <header class="header">
         <p class="header__logo">NewAnalyzer</p>
         <ul class="header__menu">
-            <li class="header__menu"><a href="./index.html" class="header__menu header__menu_link">Главная</a></li>
-            <li class="header__menu"><a href="#" class="header__menu header__menu_link">О проекте</a></li>
+            <li class="header__menu"><a href="index.html" class="header__menu header__menu_link">Главная</a></li>
+            <li class="header__menu"><a href="about.html" class="header__menu header__menu_link">О проекте</a></li>
         </ul>
       </header>
 
@@ -37,16 +37,16 @@
     </section>
 
     <section class="not-found">
-      <img src="<%=require('./images/not-found.svg')%>" alt="ничего не найдено" class="not-found__icon">
+      <img src="<%=require('../images/not-found.svg').default%>" alt="ничего не найдено" class="not-found__icon">
       <h2 class="not-found__title">Ничего не найдено</h2>
       <p class="not-found__text">К сожалению, по вашему запросу ничего не найдено.</p>
     </section>
 
     <section class="results">
-      <div class="results__header">
-        <h2 class=results__title>Результаты поиска</h2>
-        <a href="#" class="results__link-on-analytics">Посмотреть аналитику ></a>
-      </div>  
+      <div class="section-header">
+        <h2 class="title results__title">Результаты поиска</h2>
+        <a href="#" class="link-on-page">Посмотреть аналитику ></a>
+      </div>
       <div class="results-items">
         <article class="results-item">
           <div class="results-item__image"></div>
@@ -64,7 +64,7 @@
              <h3 class="results-item__title">Лесные огоньки: история одной фотографии</h3>
              <p class="results-item__text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.</p>
              <p class="results-item__agency-info">МЕДУЗА</p>
-          </div>   
+          </div>
         </article>
         <article class="results-item">
           <div class="results-item__image"></div>
@@ -73,16 +73,16 @@
             <h3 class="results-item__title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h3>
             <p class="results-item__text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
             <p class="results-item__agency-info">РИА</p>
-          </div>  
+          </div>
         </article>
       </div>
       <button class="results__button">Показать еще</button>
     </section>
 
     <section class="about-author">
-      <img src="<%=require('./images/myphoto.jpg')%>" alt="фотография автора страницы" class="about-author__avatar">
+      <img src="<%=require('../images/myphoto.jpg').default%>" alt="фотография автора страницы" class="about-author__avatar">
       <div class="about-author__content">
-        <h2 class="about-author__title">Об авторе</h2>
+        <h2 class="title about-author__title">Об авторе</h2>
         <p class="about-author__text">
           Привет! Меня зовут Татьяна. Я начинающий фронтенд разработчик. С февраля по декабрь 2020 года я училась на Яндекс Практикуме. Эта страничка является моим дипломным проектом.
         </p>
@@ -97,20 +97,20 @@
             <li class="about-author__text about-author__text_skill">работать с командной строкой с помощью bash</li>
         </ul>
         <p class="about-author__text">Мои проекты можно просмотреть кликнув по<a href="https://github.com/HaneulSky" class="about-author__text"> ссылке</a>, или по иконке гитхаба внизу страницы.</p>
-      </div>  
+      </div>
     </section>
 
     <footer class="footer">
       <p class="footer__copyright">&copy 2020 Supersite</p>
     <ul class="footer__pages">
-      <li class="footer__page"><a href="./index.html" class="footer__page footer__page_link">Главная</a></li>
-      <li class="footer__page"><a href="#" class="footer__page footer__page_link">О проекте</a></li>
-      <li class="footer__page"><a href="#" class="footer__page footer__page_link">Яндекс.Практикум</a></li>
+      <li class="footer__page"><a href="index.html" class="footer__page footer__page_link">Главная</a></li>
+      <li class="footer__page"><a href="about.html" class="footer__page footer__page_link">О проекте</a></li>
+      <li class="footer__page"><a href="https://praktikum.yandex.ru/" class="footer__page footer__page_link">Яндекс.Практикум</a></li>
     </ul>
 
     <ul class="footer__socials">
-      <li class="footer__social"><a href="https://github.com/HaneulSky" class="footer__social footer__social_link"><img class="footer__social_icon" src="<%=require('./images/github.svg')%>" alt="иконка гитхаба"></a></li>
-      <li class="footer__social"><a href="#" class="footer__social_link"><img class="footer__social footer__social_icon" src="<%=require('./images/fbfacebook.svg')%>" alt="иконка фейсбука"></a></li>
+      <li class="footer__social"><a href="https://github.com/HaneulSky" class="footer__social footer__social_link"><img class="footer__social_icon" src="<%=require('../images/github.svg').default%>" alt="иконка гитхаба"></a></li>
+      <li class="footer__social"><a href="#" class="footer__social_link"><img class="footer__social footer__social_icon" src="<%=require('../images/fbfacebook.svg').default%>" alt="иконка фейсбука"></a></li>
     </ul>
     </footer>
     <script src="<%= htmlWebpackPlugin.files.js %>"></script>

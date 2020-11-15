@@ -1,4 +1,5 @@
 @import url('_link/header__menu_link.css');
+@import url('_about/header__menu_about.css');
 
 .header__menu{
     font-family: 'Roboto', sans-serif;

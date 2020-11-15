@@ -1,0 +1,10 @@
+@import url('__profile/github-item__profile.css');
+
+.github-item{
+  background: #fff;
+  width: 400px;
+  height: 288px;
+  border-radius: 16px;
+  cursor: pointer;
+  box-shadow: 0 5px 5px #081D2D, 10%;
+}

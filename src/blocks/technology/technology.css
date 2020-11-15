@@ -1,0 +1,11 @@
+@import url('__list/technology__list.css');
+@import url('__item/technology__item.css');
+@import url('__title/technology__title.css');
+@import url('__image/technology__image.css');
+
+.technology{
+  display: flex;
+  padding-left: 104px;
+  background:  #F5F6F7;
+  padding-bottom: 88px;
+}

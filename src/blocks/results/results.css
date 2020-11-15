@@ -1,8 +1,5 @@
-
-@import url('./__link-on-analytics/results__link-on-analytics.css');
 @import url('./__title/results__title.css');
 @import url('./__button/results__button.css');
-@import url('./__header/results__header.css');
 
 .results{
     max-width: inherit;
