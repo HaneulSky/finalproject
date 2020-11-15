@@ -1,0 +1,11 @@
+.results-item__agency-info{
+    font-family: 'Robotoslab', sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.4px;
+    color: #B6BCBF;
+    margin: 0;
+    position: absolute;
+    left: 24px;
+    bottom: 24px;
+}

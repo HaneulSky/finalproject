@@ -6,5 +6,8 @@
   border-radius: 100px;
   width: 608px;
   height: 64px;
-  padding: 21px 24px 21px auto;;
+  padding: 21px 24px 21px;
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 16px;
 }

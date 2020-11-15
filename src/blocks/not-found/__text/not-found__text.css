@@ -1,0 +1,9 @@
+.not-found__text{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-size: 18px;
+    text-align: center;
+    color: #B6BCBF;
+    max-width: 356px;
+    margin: 0 auto;
+}

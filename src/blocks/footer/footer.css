@@ -1,0 +1,12 @@
+@import url('__pages/footer__pages.css');
+@import url('__page/footer__page.css');
+@import url('__socials/footer__socials.css');
+@import url('__copyright/footer__copyright.css');
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    max-width: inherit;
+    padding-left: 104px;
+    padding-right: 104px;
+}
