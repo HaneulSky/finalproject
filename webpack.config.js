@@ -4,13 +4,14 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
 const webpack = require('webpack');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-
+const { CleanWebpackPlugin } = require ('clean-webpack-plugin');
 const isDev = process.env.NODE_ENV === 'development';
 
 module.exports = {
     entry: {
         main: './src/scripts/script.js',
         about: './src/scripts/about.js',
+        analytics: './src/scripts/analytics.js'
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -61,7 +62,7 @@ module.exports = {
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: 'style/style.[contenthash].css'
+            filename: 'styles/[name].[contenthash].css'
         }),
         new OptimizeCssAssetsPlugin({
             assetNameRegExp: /\.css$/i,
@@ -85,7 +86,15 @@ module.exports = {
             chunks: ['about'],
         }),
 
+        new HtmlWebpackPlugin({
+          inject: false,
+          template: './src/pages/analytics.html',
+          filename: 'analytics.html',
+          chunks: ['analytics'],
+      }),
+
         new WebpackMd5Hash(),
+        new CleanWebpackPlugin(),
         new webpack.DefinePlugin({
             NODE_ENV: JSON.stringify(process.env.NODE_ENV)
         }),

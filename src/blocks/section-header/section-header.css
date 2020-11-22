@@ -1,4 +1,11 @@
 .section-header{
     display: flex;
     justify-content: space-between;
+    max-width: 1440px;
+}
+
+@media screen and (max-width: 768px){
+  .section-header{
+    max-width: calc(768px - 80px);
+  }
 }

@@ -1,7 +1,6 @@
 .search__field.search__field_button{
   border: 1px solid #D1D2D6;
   box-sizing: border-box;
-  backdrop-filter: blur(8px);
   border-radius: 100px;
   width: 168px;
   height: 64px;
@@ -12,6 +11,36 @@
   font-style: normal;
   font-size: 18px;
   line-height: 24px;
-  position: absolute;
-  right:0
+  outline: 0;
+  cursor: pointer;
+}
+
+.search__field.search__field_button:hover{
+  background: #347EFF;
+}
+
+.search__field.search__field_button:active{
+  background: #2A65CC;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .search__field.search__field_button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 160px;
+    height: 56px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .search__field.search__field_button{
+    width: 288px;
+    height: 56px;
+    margin-top: 16px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }

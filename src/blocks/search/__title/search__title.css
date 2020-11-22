@@ -7,3 +7,19 @@
     line-height: 64px;
     margin: 0;
 }
+
+@media screen and (max-width: 768px) {
+  .search__title{
+    font-size: 36px;
+    max-width: 385px;
+    line-height: 40px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .search__title{
+    font-size: 36px;
+    max-width: 285px;
+    line-height: 40px;
+  }
+}

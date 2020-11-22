@@ -1,0 +1,9 @@
+.about-author__content{
+  padding-right: 216px;
+}
+
+@media screen and (max-width: 768px){
+  .about-author__content{
+    padding-right: 40px;
+  }
+}

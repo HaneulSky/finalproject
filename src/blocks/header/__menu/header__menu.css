@@ -1,5 +1,5 @@
 @import url('_link/header__menu_link.css');
-@import url('_about/header__menu_about.css');
+@import url('_bg/header__menu_bg.css');
 
 .header__menu{
     font-family: 'Roboto', sans-serif;
@@ -11,7 +11,18 @@
     margin-right: 34px;
     margin-top: 0;
     margin-bottom: 0;
+    color: #000;
 }
 .header__menu:last-child{
     margin-right: 0;
 }
+
+
+
+@media screen and (max-width: 320px) {
+  .header__menu{
+    font-size: 16px;
+    margin-right: 11px;
+  }
+}
+

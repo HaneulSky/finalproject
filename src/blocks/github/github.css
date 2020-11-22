@@ -1,3 +1,7 @@
+@import url('__items/github__items.css');
+@import url('__item/github__item.css');
+
 .github{
   background:  #F5F6F7;
+  padding-bottom: 80px;
 }

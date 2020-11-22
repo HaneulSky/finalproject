@@ -4,43 +4,42 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>О проекте</title>
+  <link rel="icon" href="<%=require('../images/favicon.jpg').default%>">
   <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
 </head>
 <body class="about">
   <header class="header">
-    <p class="header__logo header__menu_about">NewAnalyzer</p>
-    <ul class="header__menu header__menu_about">
-        <li class="header__menu"><a href="index.html" class="header__menu header__menu_about header__menu_link">Главная</a></li>
-        <li class="header__menu"><a href="about.html" class="header__menu header__menu_about header__menu_link">О проекте</a></li>
+    <p class="header__logo header__menu">NewAnalyzer</p>
+    <ul class="header__menu">
+        <li class="header__menu"><a href="index.html" class="header__menu header__menu_link">Главная</a></li>
+        <li class="header__menu"><a href="about.html" class="header__menu header__menu_link">О проекте</a></li>
     </ul>
   </header>
 
-  <hr class="margin">
-
   <section class="perfomance">
     <h2 class="title">Клиентам</h2>
-    <p class="perfomance__text">
+    <p class="text perfomance__text">
       Этот сайт — дипломный проект студента Яндекс.Практикума.
       Его цель — показать, чему научился студент, какими технологиями владеет.
     </p>
-    <p class="perfomance__text">
+    <p class="text perfomance__text">
       Вёрстка сайта выполнена по методологии БЭМ. Это делает сайт гибким и масштабируемым.
       Кроме того, добавлять новые страницы и функциональность проще и быстрее, чем в проектах, выполненных по другим методологиям.
       Также сайт проще и дешевле поддерживать.
     </p>
-    <p class="perfomance__text">
+    <p class="text perfomance__text">
       Карточки с новостями приходят с сервера и обрабатываются асинхронно.
       То есть сайт продолжает работать, пока от сервера приходит ответ.
       Это повышает удобство использования сервиса.
     </p>
-    <p class="perfomance__text">
+    <p class="text perfomance__text">
       При создании проекта была использована сборка технологией Webpack.
       Это современный подход к разработке сайтов. Код оптимизируется, а значит, сайт работает быстрее.
       Также сайт работает в старых браузерах.
       Даже если посетители — пользователи старых операционных систем, у них не будет проблем с отображением.
       А значит, потенциальная аудитория возрастает.
     </p>
-    <p class="perfomance__text">
+    <p class="text perfomance__text">
       Проект был проверен экспертами Яндекс.Практикума.
       Если вашему бизнесу нужен сайт, мы рекомендуем обратиться к этому студенту.
     </p>
@@ -62,20 +61,20 @@
     <img src="<%=require('../images/myphoto.jpg').default%>" alt="фотография автора страницы" class="about-author__avatar">
     <div class="about-author__content">
       <h2 class="title about-author__title">Об авторе</h2>
-      <p class="about-author__text">
+      <p class="text about-author__text">
         Привет! Меня зовут Татьяна. Я начинающий фронтенд разработчик. С февраля по декабрь 2020 года я училась на Яндекс Практикуме. Эта страничка является моим дипломным проектом.
       </p>
-      <p class="about-author__text">За время курсов я научилась:</p>
-      <ul class=" about-author__text about-author__text_skills">
-          <li class="about-author__text about-author__text_skill">верстать адаптивные сайты</li>
-          <li class="about-author__text about-author__text_skill">работать с графическим редактором Figma</li>
-          <li class="about-author__text about-author__text_skill">технологии БЭМ</li>
-          <li class="about-author__text about-author__text_skill">базовым знаниям JavaScript</li>
-          <li class="about-author__text about-author__text_skill">собирать проекты с помощью Webpack</li>
-          <li class="about-author__text about-author__text_skill">пользоваться технологией контроля версий Git</li>
-          <li class="about-author__text about-author__text_skill">работать с командной строкой с помощью bash</li>
+      <p class="text about-author__text">За время курсов я научилась:</p>
+      <ul class="text about-author__text about-author__text_skills">
+        <li class="text about-author__text about-author__text_skill">верстать адаптивные сайты</li>
+        <li class="text about-author__text about-author__text_skill">работать с графическим редактором Figma</li>
+        <li class="text about-author__text about-author__text_skill">технологии БЭМ</li>
+        <li class="text about-author__text about-author__text_skill">базовым знаниям JavaScript</li>
+        <li class="text about-author__text about-author__text_skill">собирать проекты с помощью Webpack</li>
+        <li class="text about-author__text about-author__text_skill">пользоваться технологией контроля версий Git</li>
+        <li class="text about-author__text about-author__text_skill">работать с командной строкой с помощью bash</li>
       </ul>
-      <p class="about-author__text">Мои проекты можно просмотреть кликнув по<a href="https://github.com/HaneulSky" class="about-author__text"> ссылке</a>, или по иконке гитхаба внизу страницы.</p>
+      <p class="text about-author__text">Мои проекты можно просмотреть кликнув по <a href="https://github.com/HaneulSky" class="text about-author__text link-on-page">ссылке</a>, или по иконке гитхаба внизу страницы.</p>
     </div>
   </section>
 
@@ -84,40 +83,46 @@
       <h2 class="title">
         История коммитов из GitHub
       </h2>
-      <a href="#" class="link-on-page">Открыть в гитхаб ></a>
+      <a href="https://github.com/HaneulSky/finalproject/commits/main" class="link-on-page">Открыть в гитхаб ></a>
     </div>
-    <div class="github-items">
+    <div class="github__items">
       <!--карусель будет реализована с помощью JS-->
-      <div class="github-item">
-        <time class="githun-item__time">15 ноября, 2020</time>
-        <div class="github-item__profile">
-          <img src="<%=require('../images/myphoto.jpg').default%>" class="github-item__profile github-item__profile_avatar" alt="аватар пользователя гитхаб">
-          <h3 class="github-item__profile github-item__profile_name">Мария Фёдорова</h3>
-          <p class="github-item__profile github-item__profile_email">mariiifed@yandex.ru</p>
+      <div class="github__item">
+        <time class="githun__item-time">15 ноября, 2020</time>
+        <div class="github__item-profile">
+          <img src="<%=require('../images/myphoto.jpg').default%>" class="github__item-profile github__item-profile_avatar" alt="аватар пользователя гитхаб">
+          <div class="github__item-profile_author">
+            <h3 class="github__item-profile github__item-profile_name">Мария Фёдорова</h3>
+            <p class="github__item-profile github__item-profile_email">mariiifed@yandex.ru</p>
+          </div>
         </div>
-        <p class="github-item__commit">
+        <p class="github__item-commit">
           Emmet (formerly Zen Coding) is a web-developer’s toolkit that can greatly improve your HTML & CSS workflow.
         </p>
       </div>
-      <div class="github-item">
-        <time class="githun-item__time">15 ноября, 2020</time>
-        <div class="github-item__profile">
-          <img src="<%=require('../images/myphoto.jpg').default%>" class="github-item__profile github-item__profile_avatar" alt="аватар пользователя гитхаб">
-          <h3 class="github-item__profile github-item__profile_name">Мария Фёдорова</h3>
-          <p class="github-item__profile github-item__profile_email">mariiifed@yandex.ru</p>
+      <div class="github__item">
+        <time class="githun__item-time">15 ноября, 2020</time>
+        <div class="github__item-profile">
+          <img src="<%=require('../images/myphoto.jpg').default%>" class="github__item-profile github__item-profile_avatar" alt="аватар пользователя гитхаб">
+          <div class="github__item-profile_author">
+            <h3 class="github__item-profile github__item-profile_name">Мария Фёдорова</h3>
+            <p class="github__item-profile github__item-profile_email">mariiifed@yandex.ru</p>
+          </div>
         </div>
-        <p class="github-item__commit">
+        <p class="github__item-commit">
           Emmet (formerly Zen Coding) is a web-developer’s toolkit that can greatly improve your HTML & CSS workflow.
         </p>
       </div>
-      <div class="github-item">
-        <time class="githun-item__time">15 ноября, 2020</time>
-        <div class="github-item__profile">
-          <img src="<%=require('../images/myphoto.jpg').default%>" class="github-item__profile github-item__profile_avatar" alt="аватар пользователя гитхаб">
-          <h3 class="github-item__profile github-item__profile_name">Мария Фёдорова</h3>
-          <p class="github-item__profile github-item__profile_email">mariiifed@yandex.ru</p>
+      <div class="github__item">
+        <time class="githun__item-time">15 ноября, 2020</time>
+        <div class="github__item-profile">
+          <img src="<%=require('../images/myphoto.jpg').default%>" class="github__item-profile github__item-profile_avatar" alt="аватар пользователя гитхаб">
+          <div class="github__item-profile_author">
+            <h3 class="github__item-profile github__item-profile_name">Мария Фёдорова</h3>
+            <p class="github__item-profile github__item-profile_email">mariiifed@yandex.ru</p>
+          </div>
         </div>
-        <p class="github-item__commit">
+        <p class="github__item-commit">
           Emmet (formerly Zen Coding) is a web-developer’s toolkit that can greatly improve your HTML & CSS workflow.
         </p>
       </div>
@@ -134,7 +139,7 @@
 
   <ul class="footer__socials">
     <li class="footer__social"><a href="https://github.com/HaneulSky" class="footer__social footer__social_link"><img class="footer__social_icon" src="<%=require('../images/github.svg').default%>" alt="иконка гитхаба"></a></li>
-    <li class="footer__social"><a href="#" class="footer__social_link"><img class="footer__social footer__social_icon" src="<%=require('../images/fbfacebook.svg').default%>" alt="иконка фейсбука"></a></li>
+    <li class="footer__social"><a href="https://vk.com/tanya0610" class="footer__social_link"><img class="footer__social footer__social_icon" src="<%=require('../images/vk.svg').default%>" alt="иконка вконтакте"></a></li>
   </ul>
   </footer>
   <script src="<%= htmlWebpackPlugin.files.js %>"></script>

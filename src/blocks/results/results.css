@@ -1,8 +1,10 @@
 @import url('./__title/results__title.css');
 @import url('./__button/results__button.css');
+@import url('./__items/results__items.css');
+@import url('./__item/results__item.css');
 
 .results{
-    max-width: inherit;
+    max-width: 1440px;
     padding-right: 104px;
     padding-left: 104px;
     padding-top: 80px;
@@ -10,4 +12,12 @@
     background: #F5F6F7;
     display: flex;
     flex-direction: column;
+}
+
+@media screen and (max-width: 768px){
+  .results{
+    max-width: calc(768px - 40px - 40px);
+    padding-right: 40px;
+    padding-left: 40px;
+  }
 }

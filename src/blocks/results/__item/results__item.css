@@ -1,0 +1,26 @@
+@import url('./__item-agency-info/results__item-agency-info.css');
+@import url('./__item-image/results__item-image.css');
+@import url('./__item-text/results__item-text.css');
+@import url('./__item-time/results__item-time.css');
+@import url('./__item-title/results__item-title.css');
+@import url('./__item-content/results__item-content.css');
+
+.results__item{
+    max-width: 400px;
+    min-height: 576px;
+    background: #fff;
+    border-radius: 16px;
+    cursor: pointer;
+    position: relative;
+}
+
+.results__item:hover{
+    box-shadow: 0px 5px 10px #081D2D;
+}
+
+@media screen and (max-width: 768px){
+  .results__item{
+    max-width: 224px;
+    min-height: 420px;
+  }
+}

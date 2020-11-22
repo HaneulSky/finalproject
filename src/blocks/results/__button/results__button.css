@@ -12,3 +12,10 @@
     margin: 0 auto;
     align-self: center;
 }
+
+@media screen and (max-width){
+  .results__button{
+    width: 240px;
+    height: 56px;
+  }
+}

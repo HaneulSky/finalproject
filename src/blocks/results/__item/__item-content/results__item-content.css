@@ -1,0 +1,9 @@
+.results__item-content{
+    padding: 20px 24px 24px 24px;
+}
+
+@media screen and (max-width: 768px){
+  .results__item-content{
+    padding: 16px;
+  }
+}

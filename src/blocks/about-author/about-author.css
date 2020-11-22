@@ -7,3 +7,10 @@
     display: flex;
     padding-bottom: 80px;
 }
+
+@media screen and (max-width: 768px){
+  .about-author{
+    max-width: 768px;
+    padding-bottom: 48px;
+  }
+}

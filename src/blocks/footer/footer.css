@@ -6,7 +6,15 @@
 .footer{
     display: flex;
     justify-content: space-between;
-    max-width: inherit;
+    max-width: 1440px;
     padding-left: 104px;
     padding-right: 104px;
+}
+
+@media screen and (max-width: 768px){
+  .footer{
+    max-width: calc(768px - 40px - 40px);
+    padding-left: 40px;
+    padding-right: 40px;
+  }
 }

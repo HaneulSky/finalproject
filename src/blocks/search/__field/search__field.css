@@ -6,3 +6,20 @@
     height: 64px;
     position: relative;
 }
+
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .search__field {
+    max-width: 452px;
+    height: 56px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .search__field{
+    display: flex;
+    position: static;
+    max-width: 288px;
+    height: 56px;
+    flex-wrap: wrap;
+  }
+}

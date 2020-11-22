@@ -1,0 +1,12 @@
+@import url('__item-profile/github__item-profile.css');
+@import url('__item-commit/github__item-commit.css');
+
+.github__item{
+  background: #fff;
+  width: 400px;
+  min-height: 288px;
+  border-radius: 16px;
+  cursor: pointer;
+  box-shadow: 0 5px 5px #081D2D, 10%;
+  padding: 24px 24px 0 24px;
+}

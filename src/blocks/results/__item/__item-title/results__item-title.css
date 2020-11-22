@@ -1,0 +1,16 @@
+.results__item-title{
+    font-family: 'Robotoslab', sans-serif;
+    font-size: 26px;
+    line-height: 30px;
+    margin-top: 12px;
+    margin-bottom: 16px;
+}
+
+@media screen and (max-width: 768px){
+  .results__item-title{
+    font-size: 22px;
+    line-height: 24px;
+    margin-top: 12px;
+    margin-bottom: 10px;
+  }
+}
