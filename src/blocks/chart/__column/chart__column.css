@@ -1,0 +1,11 @@
+.chart__column{
+  width: 10%;
+  height: 24px;
+  background: #2F71E5;
+  color: #fff;
+  margin-bottom: 56px;
+}
+
+.chart__column:last-child{
+  margin-bottom: 0;
+}
