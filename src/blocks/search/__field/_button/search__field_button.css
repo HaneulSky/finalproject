@@ -34,7 +34,7 @@
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 767px) {
   .search__field.search__field_button{
     width: 288px;
     height: 56px;
