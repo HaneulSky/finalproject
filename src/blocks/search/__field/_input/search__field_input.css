@@ -1,23 +1,30 @@
-.search__field_input{
+.search__field-input{
   background: #fff;
   border: 1px solid #D1D2D6;
   box-sizing: border-box;
   backdrop-filter: blur(8px);
   border-radius: 100px;
   width: 608px;
-  height: 64px;
+  height: inherit;
   padding: 21px 24px 21px;
   font-family: 'Roboto';
   font-weight: 400;
   font-size: 16px;
 }
 
-.search__field.search__field_input:focus{
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  .search__field-input {
+    max-width: 452px;
+    height: 56px;
+  }
+}
+
+.search__field-input:focus{
   outline: 0;
 }
 
 @media screen and (max-width: 320px) {
-  .search__field_input{
+  .search__field-input{
     max-width: 288px;
     height: 56px;
   }

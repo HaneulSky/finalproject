@@ -7,7 +7,7 @@
     position: relative;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1440px) {
+@media screen and (min-width: 768px) and (max-width: 1439px) {
   .search__field {
     max-width: 452px;
     height: 56px;
