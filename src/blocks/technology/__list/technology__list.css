@@ -5,3 +5,9 @@
   width: 598px;
   padding: 0;
 }
+
+@media screen and (max-width: 768px){
+  .technology__list{
+    width: 672px;
+  }
+}

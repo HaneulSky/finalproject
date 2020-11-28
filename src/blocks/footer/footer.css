@@ -18,3 +18,12 @@
     padding-right: 40px;
   }
 }
+
+@media screen and (max-width: 320px){
+  .footer{
+    flex-wrap: wrap;
+    max-width: 320px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}

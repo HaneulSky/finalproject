@@ -3,3 +3,10 @@
   margin-right: 178px;
   margin-top: 80px;
 }
+
+@media screen and (max-width: 768px){
+  .technology__title{
+    margin-top: 40px;
+    margin-right: 0;
+  }
+}

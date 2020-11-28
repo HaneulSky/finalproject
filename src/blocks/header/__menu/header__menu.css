@@ -3,26 +3,19 @@
 
 .header__menu{
     font-family: 'Roboto', sans-serif;
-    font-style: medium;
     font-size: 18px;
     font-weight: 500;
     display: flex;
     align-items: flex-end;
-    margin-right: 34px;
     margin-top: 0;
     margin-bottom: 0;
     color: #000;
 }
-.header__menu:last-child{
-    margin-right: 0;
-}
-
 
 
 @media screen and (max-width: 320px) {
   .header__menu{
     font-size: 16px;
-    margin-right: 11px;
   }
 }
 

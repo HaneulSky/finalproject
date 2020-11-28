@@ -15,6 +15,6 @@
 @media screen and (max-width: 320px){
   .background{
     padding-bottom: 32px;
-
+    min-height: 536px;
   }
 }

@@ -13,7 +13,7 @@
     align-self: center;
 }
 
-@media screen and (max-width){
+@media screen and (max-width: 768px){
   .results__button{
     width: 240px;
     height: 56px;

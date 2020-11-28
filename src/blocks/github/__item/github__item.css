@@ -9,4 +9,17 @@
   cursor: pointer;
   box-shadow: 0 5px 5px #081D2D, 10%;
   padding: 24px 24px 0 24px;
+  margin-right: 16px;
+}
+
+.github__item:last-child{
+  margin-right: 0;
+}
+
+@media screen and (max-width: 768px){
+  .github__item{
+    width: calc(336px - 48px);
+    min-height: 242px;
+    margin-right: 8px;
+  }
 }

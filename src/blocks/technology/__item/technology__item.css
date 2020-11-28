@@ -7,3 +7,9 @@
   text-align: center;
   margin-top: 93px;
 }
+
+@media screen and (max-width: 768px){
+  .technology__item{
+    margin-top: 40px;
+  }
+}

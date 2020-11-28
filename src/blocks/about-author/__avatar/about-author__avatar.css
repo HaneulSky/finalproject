@@ -16,3 +16,10 @@
     margin-left: 40px;
   }
 }
+@media screen and (max-width: 767px){
+  .about-author__avatar{
+    width: 232px;
+    height: 232px;
+    margin: 32px 24px 24px 24px;
+  }
+}

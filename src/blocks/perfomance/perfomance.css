@@ -6,3 +6,12 @@
   padding-top: 80px;
   padding-bottom: 94px;
 }
+
+@media screen and (max-width: 768px){
+  .perfomance{
+    padding-left: 40px;
+    padding-bottom: 26px;
+    padding-top: 30px;
+    padding-right: 40px;
+  }
+}
