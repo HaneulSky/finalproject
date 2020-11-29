@@ -1,0 +1,16 @@
+.footer__pages{
+    display: flex;
+    justify-content: space-between;
+    width: 401px;
+    list-style: none;
+}
+
+@media screen and (max-width: 767px){
+  .footer__pages{
+    order: -1;
+    max-width: 184px;
+    flex-direction: column;
+    justify-content: start;
+    padding-left: 0;
+  }
+}

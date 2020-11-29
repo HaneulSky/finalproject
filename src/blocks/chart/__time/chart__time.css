@@ -1,0 +1,9 @@
+.chart__time{
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  margin: 0 0 56px 0;
+}
+
+.chart__time:last-child{
+  margin-bottom: 0;
+}

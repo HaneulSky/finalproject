@@ -1,0 +1,17 @@
+.chart__column{
+  width: 500px;
+  height: 24px;
+  background: #2F71E5;
+  color: #fff;
+  margin-bottom: 56px;
+}
+
+.chart__column:last-child{
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px){
+  .chart__column{
+    width: 150px;
+  }
+}

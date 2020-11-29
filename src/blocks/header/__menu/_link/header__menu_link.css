@@ -1,0 +1,23 @@
+.header__menu.header__menu_link{
+  text-decoration: none;
+  list-style: none;
+  color: #000;
+  margin-right: 34px;
+}
+
+.header__menu.header__menu_link:last-child{
+  margin-right: 0;
+}
+
+.header__menu_link:hover{
+    opacity: 0.5;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 320px) {
+  .header__menu.header__menu_link{
+    margin-right: 11px;
+  }
+}

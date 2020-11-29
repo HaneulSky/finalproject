@@ -1,0 +1,5 @@
+.chart__header{
+  display: flex;
+  border-bottom: 1px solid #1A1B22;
+  margin-bottom: 44px;
+}

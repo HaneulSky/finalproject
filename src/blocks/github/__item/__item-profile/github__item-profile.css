@@ -1,0 +1,7 @@
+@import url('_avatar/github__item-profile_avatar.css');
+@import url('_name/github__item-profile_name.css');
+@import url('_email/github__item-profile_email.css');
+
+.github__item-profile{
+  display: flex;
+}

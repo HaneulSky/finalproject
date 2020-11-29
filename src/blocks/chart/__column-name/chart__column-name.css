@@ -1,0 +1,10 @@
+.chart__column-name{
+  color: #B6BCBF;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  margin-right: 64px;
+}
+
+.chart__column-name:last-child{
+  margin-right: 0;
+}

@@ -1,0 +1,25 @@
+@import url('__text/search__text.css');
+@import url('__title/search__title.css');
+@import url('__field/search__field.css');
+@import url('__field-button/search__field-button.css');
+@import url('field-input/search__field-input.css');
+
+.search{
+    padding-left: 416px;
+    color: #fff;
+    padding-top: 80px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  .search{
+    padding-left: 163px;
+    padding-top: 40px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .search{
+    padding-left: 19px;
+    padding-top: 30px;
+  }
+}

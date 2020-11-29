@@ -1,0 +1,25 @@
+.about-author__avatar{
+    width: 464px;
+    height: 464px;
+    border-radius: 1000px;
+    margin-top: 80px;
+    margin-right: 56px;
+    margin-left: 104px;
+}
+
+@media screen and (max-width: 768px){
+  .about-author__avatar{
+    width: 232px;
+    height: 232px;
+    margin-top: 61px;
+    margin-right: 32px;
+    margin-left: 40px;
+  }
+}
+@media screen and (max-width: 767px){
+  .about-author__avatar{
+    width: 232px;
+    height: 232px;
+    margin: 32px 24px 24px 24px;
+  }
+}

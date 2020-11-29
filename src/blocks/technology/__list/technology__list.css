@@ -1,0 +1,14 @@
+.technology__list{
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  width: 598px;
+  padding: 0;
+}
+
+@media screen and (max-width: 768px){
+  .technology__list{
+    width: 672px;
+    flex-wrap: wrap;
+  }
+}

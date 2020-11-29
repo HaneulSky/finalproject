@@ -1,0 +1,21 @@
+@import url('_link/header__menu_link.css');
+@import url('_bg/header__menu_bg.css');
+
+.header__menu{
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    display: flex;
+    align-items: flex-end;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #000;
+}
+
+
+@media screen and (max-width: 320px) {
+  .header__menu{
+    font-size: 16px;
+  }
+}
+

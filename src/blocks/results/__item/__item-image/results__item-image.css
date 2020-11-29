@@ -1,0 +1,12 @@
+.results__item-image{
+    width: inherit;
+    height: 272px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+
+@media screen and (max-width: 768px){
+  .results__item-image{
+    height: 150px;
+  }
+}

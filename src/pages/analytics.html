@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News Analytics</title>
+  <link rel="icon" href="<%=require('../images/favicon.jpg').default%>">
+  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
+</head>
+<body class="main">
+  <header class="header">
+    <p class="header__logo header__menu">NewAnalyzer</p>
+    <ul class="header__menu">
+        <li class="header__menu header__menu_link"><a href="index.html" class="header__menu header__menu_link">Главная</a></li>
+        <li class="header__menu header__menu_link"><a href="about.html" class="header__menu header__menu_link">О проекте</a></li>
+    </ul>
+  </header>
+
+  <main class="content">
+    <div class="analytics-header">
+      <p><a href="./index.html" class="link-on-page">Главная</a>/<a href="./analytics.html" class="link-on-page">Аналитика</a></p>
+      <h2 class="title">Вы спросили: "новость"</h2>
+      <p class="text analytics-text">Новостей за неделю: <span class="count">100500</span> </p>
+      <p class="text">Упоминаний в загаловках: <span class="count">100500</span></p>
+    </div>
+    <section class="news-analytics">
+      <h3 class="news-analytics__title">Аналитика по дням</h3>
+      <div class="chart">
+        <div class="chart__header">
+          <p class="chart__column-name">дата</p>
+          <p class="chart__column-name">Кол-во упоминаний</p>
+        </div>
+        <div class="chart__results">
+          <div class="chart__time-container">
+            <p class="chart__time">23, пн</p>
+            <p class="chart__time">23, пн</p>
+            <p class="chart__time">23, пн</p>
+            <p class="chart__time">23, пн</p>
+            <p class="chart__time">23, пн</p>
+            <p class="chart__time">23, пн</p>
+            <p class="chart__time">23, пн</p>
+          </div>
+          <div class="chart__columns">
+            <div class="chart__column">10</div>
+            <div class="chart__column">10</div>
+            <div class="chart__column">10</div>
+            <div class="chart__column">10</div>
+            <div class="chart__column">10</div>
+            <div class="chart__column">10</div>
+            <div class="chart__column">10</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="footer__copyright">&copy; 2020 Supersite</p>
+  <ul class="footer__pages">
+    <li class="footer__page"><a href="index.html" class="footer__page footer__page_link">Главная</a></li>
+    <li class="footer__page"><a href="about.html" class="footer__page footer__page_link">О проекте</a></li>
+    <li class="footer__page"><a href="https://praktikum.yandex.ru/" class="footer__page footer__page_link">Яндекс.Практикум</a></li>
+  </ul>
+
+  <ul class="footer__socials">
+    <li class="footer__social"><a href="https://github.com/HaneulSky" class="footer__social footer__social_link"><img class="footer__social_icon" src="<%=require('../images/github.svg').default%>" alt="иконка гитхаба"></a></li>
+    <li class="footer__social"><a href="https://vk.com/tanya0610" class="footer__social_link"><img class="footer__social footer__social_icon" src="<%=require('../images/vk.svg').default%>" alt="иконка вконтакте"></a></li>
+  </ul>
+  </footer>
+
+  <script src="<%= htmlWebpackPlugin.files.js %>"></script>
+
+</body>
+</html>
