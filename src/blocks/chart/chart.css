@@ -1,3 +1,9 @@
 @import url('__column/chart__column.css');
+@import url('__time/chart__time.css');
+@import url('__columns/chart__columns.css');
+@import url('__time-container/chart__time-container.css');
+@import url('__column-name/chart__column-name.css');
+@import url('__header/chart__header.css');
+@import url('__results/chart__results.css');
 
 

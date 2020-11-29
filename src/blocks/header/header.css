@@ -2,7 +2,7 @@
 @import url('__menu/header__menu.css');
 
 .header{
-    max-width: 1441px;
+    max-width: 1440px;
     display: flex;
     justify-content: space-between;
     padding: 32px 104px 26px 101px;

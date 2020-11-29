@@ -11,30 +11,46 @@
   <header class="header">
     <p class="header__logo header__menu">NewAnalyzer</p>
     <ul class="header__menu">
-        <li class="header__menu"><a href="index.html" class="header__menu header__menu_link">Главная</a></li>
-        <li class="header__menu"><a href="about.html" class="header__menu header__menu_link">О проекте</a></li>
+        <li class="header__menu header__menu_link"><a href="index.html" class="header__menu header__menu_link">Главная</a></li>
+        <li class="header__menu header__menu_link"><a href="about.html" class="header__menu header__menu_link">О проекте</a></li>
     </ul>
   </header>
 
   <main class="content">
-    <p><a href="./index.html" class="link-on-page">Главная</a>/<a href="./analytics.html" class="link-on-page">Аналитика</a></p>
-
-    <h2 class="title">Вы спросили: "новость"</h2>
-    <p>Новостей за неделю: <span class="count">100500</span> </p>
-    <p>Упоминаний в загаловках: <span class="count">100500</span></p>
-
+    <div class="analytics-header">
+      <p><a href="./index.html" class="link-on-page">Главная</a>/<a href="./analytics.html" class="link-on-page">Аналитика</a></p>
+      <h2 class="title">Вы спросили: "новость"</h2>
+      <p class="text analytics-text">Новостей за неделю: <span class="count">100500</span> </p>
+      <p class="text">Упоминаний в загаловках: <span class="count">100500</span></p>
+    </div>
     <section class="news-analytics">
       <h3 class="news-analytics__title">Аналитика по дням</h3>
       <div class="chart">
-        <p class="chart__time">23, пн</p><div class="chart__column">10</div>
-        <p class="chart__time">23, пн</p><div class="chart__column">10</div>
-        <p class="chart__time">23, пн</p><div class="chart__column">10</div>
-        <p class="chart__time">23, пн</p><div class="chart__column">10</div>
-        <p class="chart__time">23, пн</p><div class="chart__column">10</div>
-        <p class="chart__time">23, пн</p><div class="chart__column">10</div>
-        <p class="chart__time">23, пн</p><div class="chart__column">10</div>
+        <div class="chart__header">
+          <p class="chart__column-name">дата</p>
+          <p class="chart__column-name">Кол-во упоминаний</p>
+        </div>
+        <div class="chart__results">
+          <div class="chart__time-container">
+            <p class="chart__time">23, пн</p>
+            <p class="chart__time">23, пн</p>
+            <p class="chart__time">23, пн</p>
+            <p class="chart__time">23, пн</p>
+            <p class="chart__time">23, пн</p>
+            <p class="chart__time">23, пн</p>
+            <p class="chart__time">23, пн</p>
+          </div>
+          <div class="chart__columns">
+            <div class="chart__column">10</div>
+            <div class="chart__column">10</div>
+            <div class="chart__column">10</div>
+            <div class="chart__column">10</div>
+            <div class="chart__column">10</div>
+            <div class="chart__column">10</div>
+            <div class="chart__column">10</div>
+          </div>
+        </div>
       </div>
-
     </section>
   </main>
 

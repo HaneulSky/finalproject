@@ -4,7 +4,7 @@
 @import url('./__item/results__item.css');
 
 .results{
-    max-width: 1440px;
+    max-width: 100%;
     padding-top: 80px;
     padding-bottom: 80px;
     background: #F5F6F7;
