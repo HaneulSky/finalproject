@@ -16,10 +16,19 @@
   margin-right: 0;
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 1439px){
   .github__item{
     width: calc(336px - 48px);
     min-height: 242px;
     margin-right: 8px;
+  }
+}
+
+@media screen and (max-width: 767px){
+  .github__item{
+    width: 288px;
+    min-height: 264px;
+    margin-right: 8px;
+    margin-top: 8px;
   }
 }

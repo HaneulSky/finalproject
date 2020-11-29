@@ -9,5 +9,6 @@
 @media screen and (max-width: 768px){
   .technology__list{
     width: 672px;
+    flex-wrap: wrap;
   }
 }
