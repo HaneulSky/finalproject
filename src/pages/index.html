@@ -50,33 +50,18 @@
           <a href="./analytics.html" class="link-on-page link-on-page_to-analytics">Посмотреть аналитику ></a>
         </div>
         <div class="results__items">
-          <article class="results__item">
-            <img src="<%=require('../images/flowers.jpg').default%>" class="results__item-image" alt="картинка по теме новостей">
-            <div class="results__item-content">
-              <p class="results__item-time">14 ноября, 2020</p>
-              <h3 class="results__item-title">Национальное достояние - парки</h3>
-              <p class="results__item-text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала склады...</p>
-              <p class="results__item-agency-info">ЛЕНТА.РУ</p>
-            </div>
-          </article>
-          <article class="results__item">
-            <img src="<%=require('../images/flowers.jpg').default%>"class="results__item-image" alt="картинка по теме новостей">
+          <!--Верстка карточки с новостью-->
+          <template id="result-template" style="display: none">
+            <article class="results__item">
+              <div class="results__item-image"></div>
               <div class="results__item-content">
-               <p class="results__item-time">14 ноября, 2020</p>
-               <h3 class="results__item-title">Лесные огоньки: история одной фотографии</h3>
-               <p class="results__item-text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала склады...</p>
-               <p class="results__item-agency-info">МЕДУЗА</p>
-              </div>
-          </article>
-          <article class="results__item">
-            <img src="<%=require('../images/flowers.jpg').default%>" class="results__item-image" alt="картинка по теме новостей">
-            <div class="results__item-content">
-              <p class="results__item-time">14 ноября, 2020</p>
-              <h3 class="results__item-title">Национальное достояние - парки</h3>
-              <p class="results__item-text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала склады...</p>
-              <p class="results__item-agency-info">РИА</p>
-            </div>
-          </article>
+                <p class="results__item-time"></p>
+                <h3 class="results__item-title"></h3>
+                <p class="results__item-text"></p>
+                <p class="results__item-agency-info"></p>
+               </div>
+            </article>
+          </template>
         </div>
         <button class="results__button">Показать еще</button>
       </section>
