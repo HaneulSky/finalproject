@@ -13,41 +13,40 @@ export default class NewsCardList {
 
     // тут просто добавляем карточку, вызываем переданную функцию в конструктор
     addCard(params) {
-      this.resultsItems.appendChild(this.createCardFunction().create(params.image, params.date, params.link, params.heading, params.text, params.source, params.keyword, params.id));
+      this.resultsItems.appendChild(this.createCardFunction(params))
     }
 
-  render(keyword) {
-    this.preLoader();
-    this.api
-      .getNews(keyword)
-      .then((res) => {
-        this.news = res.articles;
-         if(res.articles.length === 0){
-           this.notFound();
-           this.preLoader();
-         } else {
-          this.preLoader();
-          this.moreNews(this.news, keyword);
+    render(keyword){
+      this.preLoader();
+      this.api.getNews(keyword)
+        .then((res) => {
+          this.news = res.articles;
+           if(res.articles.length === 0){
+             this.notFound();
+             this.preLoader();
+           } else {
+            this.preLoader();
+            this.moreNews(this.news, keyword);
+            this.resultsItems.classList.add('results__items_active');
+            this.resultButton.classList.remove('hidden');
+          }
+            this.moreNews(this.news, keyword);
+        })
+        .then(() => {
           this.resultsItems.classList.add('results__items_active');
-          this.resultButton.classList.remove('hidden');
-        }
-          this.moreNews(this.news, keyword);
-      })
-      .then(() => {
-        this.resultsItems.classList.add('results__items_active');
-        this.preLoader();
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }
+          this.preLoader();
+        })
+        .catch((err) => {
+          console.log(err);
+        });
 
+    }
 
   notFound() {
     this.notfound.classList.add('not-found_active');
   }
 
-  //загрузка прелоудера
+
   preLoader() {
     this.preloader.classList.toggle('preloader_active')
   }

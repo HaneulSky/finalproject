@@ -17,7 +17,7 @@ const config = {
 //classes
 const githubApi = new GithubApi(config);
 const cardList = new CommitCardList(githubItems, githubApi, createCardFunction);
-const githubItem = new CommitCard(githubItems, githubTemplate);
+//const commitCard = new CommitCard(githubItems, githubTemplate);
 
 //настройки swiper
 Swiper.use([Navigation, Pagination]);
@@ -32,16 +32,16 @@ function renderCards(){
   initSwiper;
 }
 
-const createCardFunction = (...args) => {
-  const card = new CommitCard(...args, githubTemplate);
+const createCardFunction = (commitData) => {
+  const card = new CommitCard(commitData, githubTemplate);
 
   return card.create();
 };
-
-githubApi
-    .getCommits()
+ function init(){
+    githubApi.getCommits()
     .then(commits => renderCards(commits))
     .catch((err) => console.log(err));
+}
 
-cardList.render();
+init();
 

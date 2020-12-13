@@ -3,12 +3,13 @@ export default class CommitCardList {
     this.container = container;
     this.api = api;
     this.createCardFunction = createCardFunction;
+    this.list = document.querySelector('.github__swipper');
   }
 
   addCard(params) {
-    const card = this.createCardFunction(params, this.template, this.api);
+    const card = this.createCardFunction(params);
 
-    this.container.appendChild(card.create());
+    this.container.appendChild(card);
   }
 
   render() {
@@ -22,3 +23,16 @@ export default class CommitCardList {
       });
   }
 }
+
+  /*
+  render() {
+    this.api
+      .getCommits()
+      .then((res) => {
+        this.commits = res.commits;
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
+}*/

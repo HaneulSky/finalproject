@@ -1,0 +1,18 @@
+.swiper__container {
+  width: 100%;
+  padding-top: 64px;
+}
+
+@media screen and (max-width: 768px) {
+  .swiper__container {
+      padding-top: 32px;
+      /*padding: 32px 16px 0 16px;*/
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .swiper__container {
+      padding-top: 32px;
+      /*padding: 32px 16px 0 16px;*/
+  }
+}

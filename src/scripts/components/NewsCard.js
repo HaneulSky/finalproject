@@ -1,10 +1,11 @@
 export default class NewsCard {
-  constructor(newsData, resultsTemplate){
-    this.title = newsData.title;
-    this.description = newsData.description;
-    this.publishedAt =newsData.publishedAt;
-    this.name = newsData.name;
-    this.urlToImage = newsData.urlToImage;
+  constructor(articles, resultsTemplate){
+    this.publishedAt =articles.publishedAt;
+    this.name = articles.name;
+    this.urlToImage = articles.urlToImage;
+    this.title = articles.title;
+    this.description = articles.description;
+    this.url = articles.url;
     this.resultsTemplate = resultsTemplate;
    // this.templateItems = document.createElement('div');
    // this.templateItems.append(resultsTemplate.content.cloneNode(true));
@@ -18,14 +19,16 @@ export default class NewsCard {
     const itemTitle = newItem.querySelector('.results__item-title');
     const itemText = newItem.querySelector('.results__item-text');
     const itemAgency = newItem.querySelector('.results__item-agency-info');
+    const itemLink = newItem.querySelector('.results__link');
+    itemLink.setAttribute('href', this.url);
     itemTitle.textContent = this.title;
     itemText.textContent = this.description;
-    itemTime.textContent = date(this.publishedAt.slice(0, 10));
+    itemTime.textContent = this.publishedAt;
     itemAgency.textContent = this.name;
-    itemImage.src = this.urlToImage;
+    itemImage.src = `url(${this.urlToImage})`;
 
     this.itemElement = newItem;
-    this.addListeners();
+
     return this.itemElement;
   }
 }
