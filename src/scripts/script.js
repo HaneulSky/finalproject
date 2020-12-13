@@ -1,26 +1,51 @@
 import "../styles/style.css";
-import newsCardList from './components/NewsCardList';
-import newsCard from './components/NewsCard';
-import newsApi from './modules/NewsApi';
+import NewsCardList from './components/NewsCardList';
+import NewsCard from './components/NewsCard';
+import NewsApi from './modules/NewsApi';
 
-const module = (function () {
+//constants
   const resultsItems = document.querySelector('.results__items');
-  const template = resultsItems
-    .querySelector("#result-template")
-    .content.querySelector(".results__item");
+  const resultsTemplate = resultsItems.querySelector('#result-template').content.querySelector('.results__item');
   const resultsButton = document.querySelector('.results__button');
+  const preloader = document.querySelector('.preloader');
+  const notFound = document.querySelector('.not-found');
+  const newsSearchForm = document.querySelector('.search__field');
+  const searchInput = document.querySelector('.search__field-input');
   const config = {
-    baseURL: 'http://newsapi.org/v2/everything',
-    apiKey: '3d91c7e0759740f5a4f6c1f566841425'
+    baseURL: `${(NODE_ENV==='development')?'https://newsapi.org/v2/everything' : 'http://newsapi.org/v2/everything'}`,
+    //baseURL: `${(NODE_ENV==='development')?'https://nomoreparties.co/news/v2/everything' : 'http://nomoreparties.co/news/v2/everything'}`,
+   //baseURL: 'https://nomoreparties.co/news/v2/everything',
+    apiKey: '3d91c7e0759740f5a4f6c1f566841425',
+    pageSize: '100',
+    sortBy: `popularity`,
   }
+
+  //classes
   const date = new Date();
-  const newsSearchForm = document.forms.search;
-  const searchInput = newsSearchForm.elements.field;
+  const api = new NewsApi(config);
 
-  newsSearchForm.addEventListeners('submit', (event) => {
+  //functions
+
+
+
+  const createCardFunction = (...args) => {
+    const card = new NewsCard(...args, resultsTemplate);
+
+    return card.create();
+  };
+
+  const cardList = new NewsCardList(
+    resultsItems, api, createCardFunction, preloader, notFound, resultsButton
+  );
+
+  api
+    .getNews(searchInput.value)
+    .then(articles => renderCards(articles))
+    .catch((err) => console.log(err));
+
+   //listeners
+   newsSearchForm.addEventListener('submit', (event) => {
     event.preventDefault();
-    resultsItems.classList.add('results_active');
-    newsCardList.render(searchInput.value);
-  })
-
-})
+    resultsItems.classList.add('results__items_active');
+    cardList.render(searchInput.value)
+    });

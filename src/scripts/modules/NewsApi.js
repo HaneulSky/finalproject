@@ -1,11 +1,11 @@
-import { today, weekAgoDate } from "../utils/date";
+import { dateMin, dateMax } from "../utils/date";
 
 export default class NewsApi {
-  constructor(config, param){
-      this.baseUrl= config.baseUrl;
+  constructor(config){
+      this.baseURL = config.baseURL;
+      this.sortBy = config.sortBy;
+      this.pageSize = config.pageSize;
       this.apiKey = config.apiKey;
-      this.theme = param.theme;
-      this.sortBy = param.sortBy;
   }
 
   getResponseData(res) {
@@ -18,7 +18,11 @@ export default class NewsApi {
 
   getNews(keyword){
     return fetch(
-      `${this.baseUrl}?q=${keyword}&from=${weekAgoDate}&to=${today}&sortBy=${this.sortBy}&pageSize=${this.pageSize}&apiKey=${this.apiKey}`
-    ).then(this.getResponseData);
+      `${this.baseURL}?q=${keyword}&from=${dateMin}&to=${dateMax}&sortBy=${this.sortBy}&pageSize=${this.pageSize}&apiKey=${this.apiKey}`,
+      /*{
+        method: "GET",
+      }*/
+    )
+    .then(this.getResponseData);
   }
 }

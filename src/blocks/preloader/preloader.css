@@ -7,6 +7,11 @@
     padding-top: 80px;
     padding-bottom: 80px;
     max-width: 100%;
+    display: none;
+}
+
+.preloader__active{
+    display: inline;
 }
 /*
 @media screen and (max-width: 768px){

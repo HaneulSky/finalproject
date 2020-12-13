@@ -1,14 +1,15 @@
 import { MONTHS } from '../constants/MONTHS';
 
-export const dateFormat = (date) => {
-  const toDate = new Date(date);
-  const changedDate = `${toDate.getDate()} ${MONTHS[(toDate.getMonth() + 1 )]}, ${toDate.getFullYear()}`;
-  return changedDate;
+export const formatDate = (date) => {
+  const newDate = new Date(date);
+  const formatedDate = `${newDate.getDate()} ${MONTHS[(newDate.getMonth() + 1 )]}, ${newDate.getFullYear()}`;
+  return formatedDate;
 }
 
-const toDate = new Date();
-const fromDate = new Date();
-fromDate.setDate(toDate.getDate() - 7);
+//даты для запроса в NewsApi
+const currentDate = new Date();
+const weekAgoDate = new Date();
+weekAgoDate.setDate(currentDate.getDate() - 7);
 
-export const weekAgoDate = `${fromDate.getFullYear()}-${(fromDate.getMonth() + 1)}-${fromDate.getDate()}`;
-export const today = `${today.getFullYear()}-${(today.getMonth() + 1)}-${today.getDate()}`;
+export const dateMin = `${weekAgoDate.getFullYear()}-${(weekAgoDate.getMonth() + 1)}-${weekAgoDate.getDate()}`;
+export const dateMax = `${currentDate.getFullYear()}-${(currentDate.getMonth() + 1)}-${currentDate.getDate()}`;

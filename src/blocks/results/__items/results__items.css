@@ -1,11 +1,15 @@
 .results__items{
-    display: grid;
+    display: none;
     grid-template-columns: repeat(auto-fill, 400px);
     grid-gap: 16px;
     margin-top: 64px;
     margin-bottom: 64px;
     padding-right: 104px;
     padding-left: 104px;
+}
+
+.results__items_active{
+  display: grid;
 }
 
 @media screen and (max-width: 768px){
