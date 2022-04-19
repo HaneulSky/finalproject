@@ -1,28 +1,34 @@
-import { dateMin, dateMax } from "../utils/date";
+import {dateMin, dateMax} from "../utils/date";
 
 export default class NewsApi {
-  constructor(config){
-      this.baseURL = config.baseURL;
-      this.sortBy = config.sortBy;
-      this.pageSize = config.pageSize;
-      this.apiKey = config.apiKey;
-  }
-
-  getResponseData(res) {
-    if (!res.ok) {
-      return Promise.reject(new Error(`Ошибка: ${res.status}`));
-    } else {
-      return res.json();
+    constructor(config) {
+        this.baseURL = config.baseURL;
+        this.sortBy = config.sortBy;
+        this.pageSize = config.pageSize;
+        this.apiKey = config.apiKey;
+        this.endpoint = config.endpoint;
     }
-  }
 
-  getNews(keyword){
-    return fetch(
-      `${this.baseURL}?q=${keyword}&from=${dateMin}&to=${dateMax}&sortBy=${this.sortBy}&pageSize=${this.pageSize}&apiKey=${this.apiKey}`,
-      /*{
-        method: "GET",
-      }*/
-    )
-    .then(this.getResponseData);
-  }
+    getResponseData(res) {
+        if (!res.ok) {
+            return Promise.reject(new Error(`Ошибка: ${res.status}`));
+        } else {
+            return res.json();
+        }
+    }
+
+    async getNews(keyword) {
+        try {
+            const res = await fetch(`${this.baseURL}${this.endpoint}?q=${keyword}&from=${dateMin}&to=${dateMax}&sortBy=${this.sortBy}&pageSize=${this.pageSize}&apiKey=${this.apiKey}`, {
+                method: "GET",
+            });
+            const promiseRes = await res.json();
+            const articles = promiseRes.articles;
+            // console.log(articles);
+
+            return await articles;
+        } catch (error) {
+            this.getResponseData(res);
+        }
+    }
 }

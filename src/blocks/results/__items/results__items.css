@@ -1,4 +1,4 @@
-.results__items{
+.results__items {
     display: none;
     grid-template-columns: repeat(auto-fill, 400px);
     grid-gap: 16px;
@@ -8,17 +8,17 @@
     padding-left: 104px;
 }
 
-.results__items_active{
-  display: grid;
+.results__items_active {
+    display: grid;
 }
 
-@media screen and (max-width: 768px){
-  .results__items{
-    grid-template-columns: repeat(auto-fill, 224px);
-    grid-gap: 8px;
-    margin-top: 32px;
-    margin-bottom: 32px;
-    padding-right: 40px;
-    padding-left: 40px;
-  }
+@media screen and (max-width: 768px) {
+    .results__items {
+        grid-template-columns: repeat(auto-fill, 224px);
+        grid-gap: 8px;
+        margin-top: 32px;
+        margin-bottom: 32px;
+        padding-right: 40px;
+        padding-left: 40px;
+    }
 }

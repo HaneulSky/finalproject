@@ -1,18 +1,19 @@
-@import url('__image/preloader__image.css');
-@import url('__message/preloader__message.css');
+@import url("__image/preloader__image.css");
+@import url("__message/preloader__message.css");
 
-.preloader{
+.preloader {
     text-align: center;
-    background: #F5F6F7;
+    background: #f5f6f7;
     padding-top: 80px;
     padding-bottom: 80px;
     max-width: 100%;
-    display: none;
+    display: flex;
+    flex-direction: column;
 }
 
-.preloader__active{
+/* .preloader__active{
     display: inline;
-}
+} */
 /*
 @media screen and (max-width: 768px){
   .preloader{
