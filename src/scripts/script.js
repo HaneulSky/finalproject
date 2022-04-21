@@ -18,7 +18,8 @@ const errorForm = document.querySelector(".search__error");
 
 const config = {
     // baseURL: `${NODE_ENV === "development" ? "https://newsapi.org/v2/" : "http://newsapi.org/v2/"}`,
-    baseURL: `${NODE_ENV === "development" ? "http://nomoreparties.co/news/v2/" : "https://nomoreparties.co/news/v2/"}`,
+    // baseURL: `${NODE_ENV === "development" ? "http://nomoreparties.co/news/v2/" : "https://nomoreparties.co/news/v2/"}`,
+    baseURL: "https://nomoreparties.co/news/v2/",
     apiKey: "db51281e856f4bd5b2f64ff4ffac0659",
     pageSize: "100",
     sortBy: `popularity`,
