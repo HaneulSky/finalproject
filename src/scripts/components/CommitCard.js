@@ -2,11 +2,11 @@ import {formatDate} from "../utils/date";
 
 export default class CommitCard {
     constructor(commit, template) {
-        this.avatarUrl = commit.author.avatar_url;
-        this.name = commit.commit.committer.name;
-        this.email = commit.commit.committer.email;
-        this.date = commit.commit.committer.date;
-        this.message = commit.commit.message;
+        this._avatarUrl = commit.author.avatar_url;
+        this._name = commit.commit.committer.name;
+        this._email = commit.commit.committer.email;
+        this._date = commit.commit.committer.date;
+        this._message = commit.commit.message;
         this.template = template;
     }
 
@@ -18,15 +18,13 @@ export default class CommitCard {
         const itemText = newItem.querySelector(".github__item-commit");
         const itemEmail = newItem.querySelector(".github__item-profile_email");
 
-        itemTime.textContent = formatDate(this.date);
-        itemTitle.textContent = this.name;
-        itemText.textContent = this.message;
-        itemEmail.textContent = this.email;
-        itemImage.style.backgroundImage = `url(${this.avatarUrl})`;
+        itemTime.textContent = formatDate(this._date);
+        itemTitle.textContent = this._name;
+        itemText.textContent = this._message;
+        itemEmail.textContent = this._email;
+        itemImage.style.backgroundImage = `url(${this._avatarUrl})`;
 
         this.itemElement = newItem;
         return this.itemElement;
     }
 }
-
-// name, email, date, message

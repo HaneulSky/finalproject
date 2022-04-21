@@ -3,10 +3,9 @@ export default class CommitCardList {
         this.container = container;
         this.api = api;
         this.createCardFunction = createCardFunction;
-        this.swiper = document.querySelector(".github__swiper");
     }
 
-    addCommit(commit) {
+    _addCommit(commit) {
         const card = this.createCardFunction(commit);
         return this.container.appendChild(card);
     }
@@ -16,8 +15,7 @@ export default class CommitCardList {
             .getCommits()
             .then((commits) => {
                 commits.forEach((commit) => {
-                    console.log("commit", commit.author.avatar_url);
-                    this.addCommit(commit);
+                    this._addCommit(commit);
                 });
             })
             .catch((error) => {

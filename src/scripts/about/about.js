@@ -4,7 +4,7 @@ import "../components/CommitCard.js";
 import GithubApi from "../modules/GithubApi";
 import CommitCard from "../components/CommitCard";
 import CommitCardList from "../components/CommitCardList";
-import Swiper, {Navigation, Pagination} from "swiper";
+import Swiper, {Pagination} from "swiper";
 
 //constants
 const githubItems = document.querySelector(".github__items");
@@ -17,7 +17,6 @@ const config = {
 const githubApi = new GithubApi(config);
 
 const createCardFunction = (...args) => {
-    console.log(...args);
     const card = new CommitCard(...args, githubTemplate);
 
     return card.create();
@@ -26,7 +25,7 @@ const createCardFunction = (...args) => {
 const cardList = new CommitCardList(githubItems, githubApi, createCardFunction);
 
 const mySwiper = new Swiper(".swiper", {
-    modules: [Navigation, Pagination],
+    modules: [Pagination],
     observer: true,
     // observeParents: true,
     slidesPerView: 3,
@@ -38,17 +37,11 @@ const mySwiper = new Swiper(".swiper", {
         el: ".swiper-pagination",
         clickable: true,
     },
-
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
 });
 
 githubApi
     .getCommits()
     .then((data) => {
-        console.log("commits", data);
         cardList.render();
         mySwiper.update();
     })

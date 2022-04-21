@@ -2,10 +2,6 @@ import {formatDateforStatistic} from "../utils/date";
 
 export default class Statistics {
     constructor(templateTime, templateLine, containerTime, containerLine) {
-        // this.keyword = keyword;
-        // // this.totalResultsDay = totalResultsDay;
-        // this.totalResultsWeek = totalResultsWeek;
-        // this.totalResultsInTitle = totalResultsInTitle;
         this.templateTime = templateTime;
         this.templateLine = templateLine;
         this.containerTime = containerTime;
@@ -26,9 +22,6 @@ export default class Statistics {
         const statistic = [];
         const counts = [];
         const itemTimeTemplate = this.templateTime.cloneNode(true);
-        const itemLineTemplate = this.templateLine.cloneNode(true);
-        const itemTime = itemTimeTemplate.querySelector(".chart__time");
-        console.log(itemTimeTemplate);
 
         articles.forEach((article) => {
             return dates.push(formatDateforStatistic(article.publishedAt));
@@ -49,8 +42,6 @@ export default class Statistics {
                 count: counts[i],
             };
         }
-
-        console.log("statistic", statistic);
 
         statistic.forEach((item) => {
             this.createItem(this.containerTime, this.containerLine, item);

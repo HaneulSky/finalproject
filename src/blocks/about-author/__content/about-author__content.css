@@ -1,16 +1,21 @@
-.about-author__content{
-  padding-right: 216px;
+.about-author__content {
+    padding-right: 216px;
 }
 
-@media screen and (max-width: 768px){
-  .about-author__content{
-    padding-right: 40px;
-  }
-}
-@media screen and (max-width: 767px){
-  .about-author__content{
-    padding-left: 16px;
-    padding-right: 16px;
-  }
+@media screen and (max-width: 995px) {
+    .about-author__content {
+        padding-right: 0;
+    }
 }
 
+@media screen and (max-width: 768px) {
+    .about-author__content {
+        padding-right: 40px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .about-author__content {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
