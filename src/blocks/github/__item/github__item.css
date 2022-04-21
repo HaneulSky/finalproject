@@ -1,34 +1,34 @@
-@import url('__item-profile/github__item-profile.css');
-@import url('__item-commit/github__item-commit.css');
+@import url("__item-profile/github__item-profile.css");
+@import url("__item-commit/github__item-commit.css");
 
-.github__item{
-  background: #fff;
-  width: 400px;
-  min-height: 288px;
-  border-radius: 16px;
-  cursor: pointer;
-  box-shadow: 0 5px 5px #081D2D, 10%;
-  padding: 24px 24px 0 24px;
-  margin-right: 16px;
+.github__item {
+    background: #fff;
+    width: 400px;
+    min-height: 288px;
+    border-radius: 16px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px #081d2d, 10%;
+    padding: 24px 24px 0 24px;
+    margin-right: 16px;
 }
 
-.github__item:last-child{
-  margin-right: 0;
+.github__item:last-child {
+    margin-right: 0;
 }
 
-@media screen and (max-width: 1439px){
-  .github__item{
-    width: calc(336px - 48px);
-    min-height: 242px;
-    margin-right: 8px;
-  }
+@media screen and (max-width: 1439px) {
+    .github__item {
+        width: calc(336px - 48px);
+        min-height: 242px;
+        margin-right: 8px;
+    }
 }
 
-@media screen and (max-width: 767px){
-  .github__item{
-    width: 288px;
-    min-height: 264px;
-    margin-right: 8px;
-    margin-top: 8px;
-  }
+@media screen and (max-width: 767px) {
+    .github__item {
+        width: 288px;
+        min-height: 264px;
+        margin-right: 8px;
+        margin-top: 8px;
+    }
 }

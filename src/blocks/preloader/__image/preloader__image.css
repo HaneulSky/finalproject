@@ -1,13 +1,14 @@
-.preloader__image{
-  width: 70px;
-  height: 70px;
-  text-align: center;
-  animation: preloader-rotate 2s infinite linear;
-  margin-bottom: 24px;
+.preloader__image {
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    animation: preloader-rotate 2s infinite linear;
+    margin-bottom: 24px;
+    align-self: center;
 }
 
 @keyframes preloader-rotate {
     100% {
-      transform: rotate(360deg);
+        transform: rotate(360deg);
     }
-  }
+}

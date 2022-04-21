@@ -1,21 +1,25 @@
-@import url('./__title/results__title.css');
-@import url('./__button/results__button.css');
-@import url('./__items/results__items.css');
-@import url('./__item/results__item.css');
+@import url("./__title/results__title.css");
+@import url("./__button/results__button.css");
+@import url("./__items/results__items.css");
+@import url("./__item/results__item.css");
 
-.results{
+.results {
     max-width: 100%;
     padding-top: 80px;
     padding-bottom: 80px;
-    background: #F5F6F7;
-    display: flex;
+    background: #f5f6f7;
+    display: none;
     flex-direction: column;
 }
 
-@media screen and (max-width: 768px){
-  .results{
-    max-width: calc(768px - 40px - 40px);
-    padding-right: 40px;
-    padding-left: 40px;
-  }
+.results__active {
+    display: flex;
+}
+
+@media screen and (max-width: 768px) {
+    .results {
+        max-width: calc(768px - 40px - 40px);
+        padding-right: 40px;
+        padding-left: 40px;
+    }
 }

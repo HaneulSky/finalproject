@@ -1,0 +1,11 @@
+/* @import "../../../node_modules/swiper/swiper-bundle.css";
+@import "__container/swiper__container.css";
+@import "__button-next/swiper__button-next.css";
+@import "__button-prev/swiper__button-prev.css";
+@import "__pagination/swiper__pagination.css";
+@import "__button/swiper__button.css"; */
+
+.swiper {
+    width: 80%;
+    height: 300px;
+}
