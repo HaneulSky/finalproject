@@ -12,8 +12,10 @@ export default class Statistics {
         timeColumn.innerHTML += `<p class="chart__time">${content.date}</p>`;
         lineColumn.innerHTML += `<div class="chart__column">${content.count}</div>`;
         const chartColumns = document.querySelectorAll(".chart__column");
+        const chartColumn = document.querySelector(".chart__columns")
+        const columnWidth = +window.getComputedStyle(chartColumn).width.split("").slice(0, -2).join("");
         chartColumns.forEach((col) => {
-            col.style.width += `${content.count * 10}px`;
+            col.style.width += `${(columnWidth*content.count)/100}px`;
         });
     }
 
@@ -21,13 +23,15 @@ export default class Statistics {
         const dates = [];
         const statistic = [];
         const counts = [];
+        const sortDates = {};
+        const objDates = {};
         const itemTimeTemplate = this.templateTime.cloneNode(true);
 
         articles.forEach((article) => {
             return dates.push(formatDateforStatistic(article.publishedAt));
         });
 
-        for (let i in dates) {
+        for (let i in dates.sort()) {
             if (counts[dates[i]]) {
                 counts[dates[i]]++;
             } else {
